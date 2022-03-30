@@ -1,12 +1,15 @@
 import React from 'react'
 
-export default function About() {
+export default function About(props) {
+    let accordionItemStyle = {backgroundColor :props.mode==='light'?'white':'#808080', color :props.mode==='light'?'black':'white'};
+    let accordionButtonStyle = {backgroundColor :props.mode==='light'?'#9898f7':'rgb(53 51 51)', color:props.mode==='light'?'black':'white'};
+
     return (
         <div className="container my-5">
             <div className="accordion" id="accordionExample">
-                <div className="accordion-item">
+                <div className="accordion-item" style={accordionItemStyle}>
                     <h2 className="accordion-header" id="headingOne">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button className="accordion-button" style={accordionButtonStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Accordion Item #1
                         </button>
                     </h2>
@@ -16,9 +19,9 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-                <div className="accordion-item">
+                <div className="accordion-item" style={accordionItemStyle}>
                     <h2 className="accordion-header" id="headingTwo">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button className="accordion-button collapsed" style={accordionButtonStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             Accordion Item #2
                         </button>
                     </h2>
@@ -28,9 +31,9 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-                <div className="accordion-item">
+                <div className="accordion-item" style={accordionItemStyle}>
                     <h2 className="accordion-header" id="headingThree">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button className="accordion-button collapsed" style={accordionButtonStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             Accordion Item #3
                         </button>
                     </h2>
